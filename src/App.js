@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="AppContainer">
+      <Sidebar />
+      <Timeline />
+      <ChannelInfo />
     </div>
   );
+}
+
+function Sidebar() {
+    return (
+        <div className="SideBar">
+            SideBar
+        </div>
+    );
+}
+
+function Timeline() {
+    return (
+        <div className="Timeline">
+            Timeline
+        </div>
+    );
+}
+
+function ChannelInfo() {
+    return (
+        <div className="ChannelInfo">
+            <div className="PortraitOverlay">
+                ChannelInfo
+            </div>
+        </div>
+    );
 }
 
 export default App;
