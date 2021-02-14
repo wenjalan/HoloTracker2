@@ -1,5 +1,6 @@
 html {
   background: linear-gradient(180deg, #FAC8FA 0%, #3296C8 100%);
+  /*background: rgb(255,0,0);*/
   height: 100%;
   width: 100%;
   display: flex;

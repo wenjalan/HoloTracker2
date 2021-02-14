@@ -20,25 +20,87 @@
 }
 
 .ChannelInfo {
+    position: relative;
     width: 20vw;
     height: 100%;
-    /*background: rgba(255, 255, 255, 0.5);*/
-    background-image: url("assets/kanata.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 50%;
     margin-right: 0;
     padding-right: 0;
+    display: grid;
+}
+
+.ChannelInfo::before {
+    content: "";
+    background: url("assets/kanata.jpg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
 }
 
 .PortraitOverlay {
+    grid-area: 1 / 1;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.5);
 }
 
-.title {
+.channelInfoBox {
+    position: relative;
+    grid-area: 1 / 1;
+    width: 15vw;
+    text-align: center;
+    margin: 2.5vw 2.5vw 0 2.5vw;
+    font-family: Lato;
+    font-size: 1em;
+    color: #666666;
+}
+
+.channelIcon {
+    height: 10vw;
+    width: 10vw;
+    margin: 2.5vw 2.5vw 0 2.5vw;
+    background-image: url("assets/starbot.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+#channelName {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #326496;
+    margin: 0 0 0 0;
+}
+
+#channelName:hover {
+    cursor: pointer;
+}
+
+#subscriberText {
+    margin: 0 0 0 0;
+}
+
+#generationText {
+    margin: 0 0 0 0;
+}
+
+#twitterHandle {
+    color: #3296C8;
+}
+
+#twitterHandle:hover {
+    cursor: pointer;
+}
+
+#title {
     font-family: Lato;
     font-style: normal;
     font-weight: 300;
@@ -46,9 +108,7 @@
     line-height: 850%;
     display: flex;
     align-items: center;
-
     color: rgba(0, 0, 0, 0.25);
-
     mix-blend-mode: normal;
     transform: rotate(-90deg);
 }
