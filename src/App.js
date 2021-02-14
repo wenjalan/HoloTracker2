@@ -12,9 +12,15 @@ function App() {
 }
 
 function Sidebar() {
+    let onGithubIconClicked = (event) => {
+        alert("GitHub Icon Clicked!");
+        console.log('GitHub Icon Clicked!');
+    };
+
     return (
         <div className="SideBar">
-            SideBar
+            <h1 className="title">HoloTracker</h1>
+            <a className="githubButton" onClick={(e) => onGithubIconClicked(e)}/>
         </div>
     );
 }
